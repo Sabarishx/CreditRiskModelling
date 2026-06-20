@@ -1,6 +1,4 @@
-# CreditRiskModelling - Probability of Default (PD Model)
-
-# Credit Risk Modelling – Probability of Default (PD) Prediction
+# Credit Risk Modelling – Probability of Default (PD Model)
 
 ## Overview
 
