@@ -119,16 +119,27 @@ loan_status
 
 ### Missing Value Treatment
 
-* Median imputation for interest rate variables.
+Numerical Features:
+
+Low missing (<5%) → Fill with median.
+Moderate missing (5–30%) → Use group-based median or KNN.
+High missing (>30%) → Drop if unimportant or use advanced imputation.
+
+Categorical Features:
+
+Low missing (<5%) → Fill with mode (most frequent value).
+Moderate missing (5–30%) → Fill using predictive imputation.
+High missing (>30%) → Drop unless crucial.
 
 ### Outlier Handling
 
-Records are filtered based on business rules:
+Outliers can distort mean-based calculations and mislead models. In finance data, extreme values often indicate:
 
-```python
-person_age <= 90
-person_emp_length <= 45
-```
+Genuine high-income individuals
+Data entry errors
+Fraudulent or rare cases
+
+I have used IQR to Detect Outliers
 
 ### Feature Engineering
 
